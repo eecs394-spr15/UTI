@@ -3,3 +3,12 @@
   text-align: center;
   font-weight: 600;
 }
+
+.initial-img{
+	position:relative;
+	width: 130%;
+	left:-8%;
+}
+.img-div{
+	margin-top: 26%;
+}
