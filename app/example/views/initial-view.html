@@ -6,8 +6,11 @@
 
 <div class="padding">
 
-  <p>Please use the mock log in button below to dismiss the Initial View and initialize the rest of your app.</p>
-
-  <button onclick="supersonic.ui.initialView.dismiss()" class="button button-block button-balanced">Log in</button>
-
+  <h4 align="center">Please choose your identity</p>
+  <br>
+  <button onclick="supersonic.ui.initialView.dismiss(supersonic.ui.animate('fade'))" class="button button-block button-stable">Patient</button>
+  <button onclick="supersonic.ui.initialView.dismiss(supersonic.ui.animate('fade'))" class="button button-block button-stable">Doctor</button>
+</div>
+<div class="img-div">
+	<img class="initial-img" src="https://www.plaidforwomen.com/wp-content/uploads/2014/06/Group-of-Happy-Women.jpg">
 </div>
