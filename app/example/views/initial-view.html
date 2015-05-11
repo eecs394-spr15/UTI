@@ -1,15 +1,29 @@
 <super-navbar>
   <super-navbar-title>
-    Login
+    Patient Login
   </super-navbar-title>
 </super-navbar>
 
 <div class="padding">
 
-  <h4 align="center">Please choose your identity</p>
+  <!--<h4 align="center">Please choose your identity</p>-->
   <br>
-  <button onclick="supersonic.ui.initialView.dismiss(supersonic.ui.animate('fade'))" class="button button-block button-stable">Patient</button>
-  <button onclick="supersonic.ui.initialView.dismiss(supersonic.ui.animate('fade'))" class="button button-block button-stable">Doctor</button>
+  
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Username">
+  </label>
+  <label class="item item-input">
+    <input type="password" placeholder="Password">
+  </label>
+</div>
+
+  <button onclick="supersonic.ui.initialView.dismiss(supersonic.ui.animate('fade'))" class="button button-block button-stable">Sign In</button>
+  <div id="register-link">
+  <a href="">
+  	<p>Don't have a username? Register here</p>
+  </a>
+  </div>
 </div>
 <div class="img-div">
 	<img class="initial-img" src="https://www.plaidforwomen.com/wp-content/uploads/2014/06/Group-of-Happy-Women.jpg">

@@ -5,10 +5,15 @@
 }
 
 .initial-img{
-	position:relative;
-	width: 130%;
-	left:-8%;
+	position:fixed;
+    bottom:0px;
+	width: 100%;
 }
 .img-div{
-	margin-top: 26%;
+	/*margin-top: 15%;*/
+}
+
+#register-link{
+	margin-top: 10%;
+	text-align: center;
 }
