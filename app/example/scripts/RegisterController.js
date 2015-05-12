@@ -16,13 +16,19 @@ angular
 		        supersonic.ui.dialog.alert("You have successfully signed up!");
 		        supersonic.ui.initialView.dismiss();
 <<<<<<< HEAD
+<<<<<<< HEAD
 				//window.location.replace("basic-info.html");
 =======
+=======
+>>>>>>> origin/master
 <<<<<<< Updated upstream
 				window.location.replace("basic-info.html");
 =======
 				//window.location.replace("basic-info.html");
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 		      },
 		      error: function(user, error) {

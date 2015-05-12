@@ -5,10 +5,13 @@ angular
   	 $scope.currentUser = Parse.User.current();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(localStorage.getItem("user")) {
 		supersonic.ui.initialView.dismiss();
 	}; //change later
 =======
+=======
+>>>>>>> origin/master
 <<<<<<< Updated upstream
     //if(localStorage.getItem("user")) {
 	//	supersonic.ui.initialView.dismiss();
@@ -18,6 +21,9 @@ angular
 		supersonic.ui.initialView.dismiss();
 	}; //change later
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 	$scope.logIn = function(){
