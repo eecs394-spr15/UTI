@@ -1,0 +1,32 @@
+<script src="http://www.parsecdn.com/js/parse-1.2.12.min.js"></script>
+<div class="padding" ng-controller ="LoginController">
+  <super-navbar>
+    <super-navbar-title>
+      Patient Login
+    </super-navbar-title>
+  </super-navbar>
+    <br>
+  
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" placeholder="Username" ng-model="existingUser.username">
+    </label>
+    <label class="item item-input">
+      <input type="password" placeholder="Password" ng-model="existingUser.password">
+    </label>
+  </div>
+
+    <button ng-click="logIn()" class="button button-block button-stable">Sign In</button>
+    <div id="register-link">
+
+      <super-navigate location="example#Register">
+              <a href="">
+            <p>Don't have a username? Register here</p>
+          </a>
+      </super-navigate>
+
+    </div>
+  <div class="img-div">
+  	<img class="initial-img" src="https://www.plaidforwomen.com/wp-content/uploads/2014/06/Group-of-Happy-Women.jpg">
+  </div>
+</div>

@@ -9,12 +9,15 @@ traits:
         steroidsApiKey:
           type: string
           example: exampleapikey
-          default: a17dcd1e12ea470f013b3ec3182c2900d9da4e52bf044af4e667c4e549a1d742
+          default: 41a7286095fb4a7746d80d818585373198324b6714dbd703b4dfc9bb6081239c
         steroidsAppId:
           type: integer
           example: 1234
-          default: 60418
+          default: 60598
 
+schemas:
+  - User_collection: '{"$schema":"http://json-schema.org/schema","title":"User collection","type":"object","properties":{"results":{"type":"array","items":{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical User representation","properties":{"createdAt":{"type":"string"},"objectId":{"type":"string"},"updatedAt":{"type":"string"},"username":{"type":"string"}},"required":[]}}}}'
+  - User_member: '{"$schema":"http://json-schema.org/schema","type":"object","description":"The canonical User representation","properties":{"createdAt":{"type":"string"},"objectId":{"type":"string"},"updatedAt":{"type":"string"},"username":{"type":"string"}},"required":[]}'
 
 resourceTypes:
   - dolan_db_collection:
@@ -161,5 +164,15 @@ resourceTypes:
         responses:
           200:
 
+
+/User:
+  description: |
+    {
+      "resourceName": "User",
+      "identifierKey": "objectId"
+    }
+  type: parse_collection
+  /{id}:
+    type: parse_member
 
 

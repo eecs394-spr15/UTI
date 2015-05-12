@@ -4,7 +4,7 @@ module.exports =
 
    initialView:
      id: "initialView"
-     location: "example#initial-view"
+     location: "example#login"
 
    drawers:
      left:
@@ -35,12 +35,12 @@ module.exports =
   #]
 
    rootView:
-     location: "example#getting-started"
+     location: "example#RootView"
 
   preloads: [
     {
       id: "learn-more"
-      location: "example#getting-started"
+      location: "example#RootView"
     }
   ]
 
