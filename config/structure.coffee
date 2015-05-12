@@ -35,12 +35,12 @@ module.exports =
   #]
 
    rootView:
-     location: "example#getting-started"
+     location: "example#RootView"
 
   preloads: [
     {
       id: "learn-more"
-      location: "example#getting-started"
+      location: "example#RootView"
     }
   ]
 

@@ -4,9 +4,15 @@ angular
 
   	 $scope.currentUser = Parse.User.current();
 
+<<<<<<< Updated upstream
     //if(localStorage.getItem("user")) {
 	//	supersonic.ui.initialView.dismiss();
 	//}; //change later
+=======
+    if(localStorage.getItem("user")) {
+		supersonic.ui.initialView.dismiss();
+	}; //change later
+>>>>>>> Stashed changes
 
 	$scope.logIn = function(){
 	    Parse.User.logIn($scope.existingUser.username, $scope.existingUser.password, {

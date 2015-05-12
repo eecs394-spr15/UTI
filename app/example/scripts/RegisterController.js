@@ -15,7 +15,11 @@ angular
 		        $scope.$apply();
 		        supersonic.ui.dialog.alert("You have successfully signed up!");
 		        supersonic.ui.initialView.dismiss();
+<<<<<<< Updated upstream
 				window.location.replace("basic-info.html");
+=======
+				//window.location.replace("basic-info.html");
+>>>>>>> Stashed changes
 		      },
 		      error: function(user, error) {
 		        supersonic.ui.dialog.alert("Error: " + error.message);
