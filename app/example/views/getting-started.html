@@ -8,21 +8,19 @@
 
   <h5 id="header-text">The Best Solution for Treating Your UTI</h5>
 
-  <super-navigate view-id="using-the-scanner">
+  <super-navigate>
     <button class="button button-block button-calm icon-left super-alert-circled">Report a UTI</button>
   </super-navigate>
-
-  <super-navigate view-id="learn-more">
     <button class="button button-block button-balanced icon-left super-search">Track Submission Status</button>
-
     <button class="button button-block button-energized icon-left super-clipboard">View UTI History</button>
 
-    <button class="button button-block button-royal icon-left super-happy">Profile and Medical Information</button>
+  <super-navigate location="example#basic-info">
+    <button class="button button-block button-royal icon-left super-happy" >Profile and Medical Information</button>
   </super-navigate>
 
   <div id="sign-out-link">
     <a href="">
-      <p>Log Out</p>
+      <p onclick="logOut()">Log Out</p>
     </a>
   </div>
   

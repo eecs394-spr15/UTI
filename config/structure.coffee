@@ -4,7 +4,7 @@ module.exports =
 
    initialView:
      id: "initialView"
-     location: "example#initial-view"
+     location: "example#login"
 
    drawers:
      left:
