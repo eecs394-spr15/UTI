@@ -5,8 +5,8 @@
 }
 
 .initial-img{
-	position:fixed;
-    bottom:0px;
+	position:relative;
+    margin-top: 31%;
 	width: 100%;
 }
 .img-div{

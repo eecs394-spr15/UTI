@@ -14,22 +14,10 @@ angular
 		        $scope.currentUser = user;
 		        $scope.$apply();
 		        supersonic.ui.dialog.alert("You have successfully signed up!");
+		        $scope.logIn();
 		        supersonic.ui.initialView.dismiss();
-<<<<<<< HEAD
-<<<<<<< HEAD
-				//window.location.replace("basic-info.html");
-=======
-=======
->>>>>>> origin/master
-<<<<<<< Updated upstream
-				window.location.replace("basic-info.html");
-=======
-				//window.location.replace("basic-info.html");
->>>>>>> Stashed changes
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+
+		        
 		      },
 		      error: function(user, error) {
 		        supersonic.ui.dialog.alert("Error: " + error.message);
@@ -40,4 +28,30 @@ angular
           supersonic.ui.dialog.alert("Please Enter the same Password");
         }
   };
+
+
+  $scope.logIn = function(){
+	    Parse.User.logIn($scope.newUser.username, $scope.newUser.password1, {
+	        success: function(user) {
+	          $scope.currentUser = user;
+	          $scope.$apply();
+	          user.save(null, {
+	            success: function(user) {
+	            //$scope.saveToLocal();
+	           	supersonic.ui.initialView.dismiss();
+	           	supersonic.ui.dialog.alert("successfully logged in");
+	           	$scope.$apply();
+	            }
+	          });
+	        },
+	        error: function(user, error) {
+	            supersonic.ui.dialog.alert("Error: " + error.message);
+	            }
+	      });
+	    
+	  };
+	    $scope.saveToLocal = function() {
+          localStorage.setItem("userName", $scope.newUser.username);
+          localStorage.setItem("userPassword", $scope.newUser.password);
+      };
   });

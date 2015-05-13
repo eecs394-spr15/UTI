@@ -1,30 +1,13 @@
 angular
   .module('example')
-  .controller('LoginController', function($scope, supersonic) {
+  .controller('LoginController', function($scope,supersonic) {
 
   	 $scope.currentUser = Parse.User.current();
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if(localStorage.getItem("user")) {
+  	 $scope.master = {};
+  	 
+    if($scope.currentUser) {
 		supersonic.ui.initialView.dismiss();
 	}; //change later
-=======
-=======
->>>>>>> origin/master
-<<<<<<< Updated upstream
-    //if(localStorage.getItem("user")) {
-	//	supersonic.ui.initialView.dismiss();
-	//}; //change later
-=======
-    if(localStorage.getItem("user")) {
-		supersonic.ui.initialView.dismiss();
-	}; //change later
->>>>>>> Stashed changes
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
 	$scope.logIn = function(){
 	    Parse.User.logIn($scope.existingUser.username, $scope.existingUser.password, {
@@ -33,9 +16,11 @@ angular
 	          $scope.$apply();
 	          user.save(null, {
 	            success: function(user) {
-	            supersonic.ui.dialog.alert("successfully logged in");
+	            //$scope.saveToLocal();
 	           	supersonic.ui.initialView.dismiss();
-	            $scope.submit();
+	           	supersonic.ui.dialog.alert("successfully logged in");
+	           	$scope.reset();
+	           	$scope.$apply();
 	            }
 	          });
 	        },
@@ -46,7 +31,14 @@ angular
 	    
 	  };
   
-  $scope.submit = function() {
-          localStorage.setItem("user", $scope.existingUser);
+   $scope.reset = function() {
+        $scope.existingUser = angular.copy($scope.master);
+      };
+
+      
+  $scope.saveToLocal = function() {
+  		  localStorage.setItem("user", $scope.currentUser);
+          localStorage.setItem("userName", $scope.existingUser.username);
+          localStorage.setItem("userPassword", $scope.existingUser.password);
       };
   });

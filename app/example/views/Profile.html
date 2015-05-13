@@ -1,10 +1,10 @@
 <super-navbar>
   <super-navbar-title>
-    basic-info
+    Profile
   </super-navbar-title>
 </super-navbar>
 
-<div class="padding">
+<div class="padding" ng-controller ="ProfileController">
 
   <h4>Basic Information</h4>
 
@@ -12,24 +12,24 @@
 
 <label class="item item-input">
     <span class="input-label">First Name</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.firstName">
   </label>
 
   <label class="item item-input">
     <span class="input-label">Last Name</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.lastName">
   </label>
 
 <label class="item item-input">
     <span class="input-label">Gender</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.gender">
   </label>
 
   <label class="item item-input item-select">
     <div class="input-label">
       Race
     </div>
-    <select>
+    <select ng-model="Profile.race">
       <option selected>White</option>
       <option>American Indian or Alaska Native</option>
       <option>Asian</option>
@@ -46,19 +46,19 @@
 
   <label class="item item-input">
     <span class="input-label">Street Address</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.streetAddress">
   </label>
 
   <label class="item item-input">
     <span class="input-label">City/Town</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.city">
   </label>
 
   <label class="item item-input item-select">
     <div class="input-label">
       State
     </div>
-      <select>
+      <select ng-model="Profile.state">
     <option select>Choose a state</option>  	
 	<option>Alabama</option>
 	<option>Alaska</option>
@@ -116,12 +116,46 @@
 
 <label class="item item-input">
     <span class="input-label">Zip Code</span>
-    <input type="text">
+    <input type="text" ng-model="Profile.zipCode">
   </label>
+    <h4>Allergy Information</h4>
+
+<div class="list">
+<ul class="list">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.sulfa">
+     </label>
+     Sulfa
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.penicillin">
+     </label>
+     Penicillin
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.nitrofurantoin">
+     </label>
+     Nitrofurantoin
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.fluoroquinolone">
+     </label>
+     Fluoroquinolone
+  </li>
+  <li class="item item-input">
+    <input type="text" placeholder="Type in any other allergies" ng-model="Profile.otherAllergy">
+  </label>
+  </li>
+</ul>
 </div>
 
-<super-navigate location="example#allergy-info">
-  <button class="button button-block button-positive"> Next</button>
-</super-navigate>
+<button ng-click="submit()" class="button button-block button-positive"> Save</button>
+<!-- <super-navigate location="example#allergy-info">
+  
+</super-navigate> -->
 
 </div>

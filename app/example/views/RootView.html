@@ -1,40 +1,26 @@
-<div class="padding">
+<div class="padding" ng-controller= "RootViewController">
 
   <super-navbar>
     <super-navbar-title>
       AmandaCare
     </super-navbar-title>
   </super-navbar>
-
+  <h5 id="header-text">Hi, {{userJSON.firstName}}</h5>
   <h5 id="header-text">The Best Solution for Treating Your UTI</h5>
 
   <super-navigate>
     <button class="button button-block button-calm icon-left super-alert-circled">Report a UTI</button>
   </super-navigate>
-    <button class="button button-block button-balanced icon-left super-search">Track Submission Status</button>
+    <button ng-click="test()" class="button button-block button-balanced icon-left super-search">Track Submission Status</button>
     <button class="button button-block button-energized icon-left super-clipboard">View UTI History</button>
 
-  <super-navigate location="example#basic-info">
+  <super-navigate location="example#Profile">
     <button class="button button-block button-royal icon-left super-happy" >Profile and Medical Information</button>
   </super-navigate>
 
   <div id="sign-out-link">
-<<<<<<< HEAD:app/example/views/RootView.html
-<<<<<<< HEAD:app/example/views/RootView.html
-    <a href="login.html">
-=======
-=======
->>>>>>> origin/master:app/example/views/RootView.html
-<<<<<<< Updated upstream:app/example/views/getting-started.html
     <a href="">
-=======
-    <a href="login.html">
->>>>>>> Stashed changes:app/example/views/RootView.html
-<<<<<<< HEAD:app/example/views/RootView.html
->>>>>>> origin/master:app/example/views/RootView.html
-=======
->>>>>>> origin/master:app/example/views/RootView.html
-      <p onclick="logOut()">Log Out</p>
+      <p ng-click="logOut()">Log Out</p>
     </a>
   </div>
   
