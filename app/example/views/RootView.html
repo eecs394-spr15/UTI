@@ -5,11 +5,11 @@
       AmandaCare
     </super-navbar-title>
   </super-navbar>
-  <h5 id="header-text">Hi, {{userJSON.firstName}}</h5>
+  <h5 id="header-text">Hi, {{currentUser.get("username")}}</h5>
   <h5 id="header-text">The Best Solution for Treating Your UTI</h5>
 
   <super-navigate>
-    <button class="button button-block button-calm icon-left super-alert-circled">Report a UTI</button>
+    <button ng-click="reportUTI()" class="button button-block button-calm icon-left super-alert-circled">Report a UTI</button>
   </super-navigate>
     <button ng-click="test()" class="button button-block button-balanced icon-left super-search">Track Submission Status</button>
     <button class="button button-block button-energized icon-left super-clipboard">View UTI History</button>

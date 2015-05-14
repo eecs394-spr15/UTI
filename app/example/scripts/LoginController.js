@@ -1,7 +1,7 @@
 angular
   .module('example')
   .controller('LoginController', function($scope,supersonic) {
-
+  	 //Parse.User.logOut();
   	 $scope.currentUser = Parse.User.current();
   	 $scope.master = {};
   	 
