@@ -40,6 +40,8 @@
     </select>
   </label>
 
+</div>
+
 <div class="QuestionMargin">
 <h4 >Home Address</h4>
 </div>
@@ -117,6 +119,7 @@
 <label class="item item-input">
     <span class="input-label profile-span">Zip Code</span>
     <input class="profile-input profile-span" type="text" ng-model="Profile.zipCode">
+
   </label>
     <h4>Allergy Information</h4>
 
@@ -148,10 +151,159 @@
   </li>
   <li class="item item-input">
     <input type="text" placeholder="Type in any other allergies" ng-model="Profile.otherAllergy">
+    <textarea name="Text1" cols="40" rows="3">
+    </textarea>
   </label>
   </li>
 </ul>
 </div>
+
+
+
+
+
+</label>
+    <h4>Past Medical History</h4>
+
+<div class="list">
+<ul class="list">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.past1">
+     </label>
+     Cancer
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.past2">
+     </label>
+     HIV/AIDS
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.past3">
+     </label>
+     Diarrhea
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox" ng-model="Profile.past4">
+     </label>
+     Swine Flu
+  </li>
+  <li class="item item-input">
+    <input type="text" placeholder="Past diseases" ng-model="Profile.pastOther">
+    <textarea name="Text1" cols="40" rows="3">
+    </textarea>
+  </label>
+  </li>
+</ul>
+</div>
+
+
+</label>
+    <h4>Past Surgical History</h4>
+  
+<div class="list">
+<ul class="list">
+    </li>
+    <li class="item item-input">
+      <input type="text" placeholder="Please provide surgical history" ng-model="Profile.surgeryHistory">
+      <textarea name="Text1" cols="40" rows="5">
+      </textarea>
+    </li>
+</ul>
+</div>
+
+
+<div class="QuestionMargin">
+<h4 >Insurance Information</h4>
+
+<div class="list">
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Insurance Group ID</span>
+    <input class="profile-input" type="text" ng-model="Profile.InsuranceGroupId">
+  </label>
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Person Responsible for Policy</span>
+    <input class="profile-input" type="text" ng-model="Profile.PolicyPerson">
+  </label>
+
+  <label class="item item-input  item-stacked-label">
+    <span class="input-label profile-span">Insurance Company</span>
+    <input class="profile-input" type="text" ng-model="Profile.InsuranceCompany">
+  </label>
+
+</div>
+
+<div class="QuestionMargin">
+<h4>Physician Information</h4>
+
+<div class="list">
+  <div class="list">
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Physician Name</span>
+    <input class="profile-input" type="text" ng-model="Profile.PhysicianName">
+  </label>
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">City</span>
+    <input class="profile-input" type="text" ng-model="Profile.PhysicianCity">
+  </label>
+</div>
+
+<div class="QuestionMargin">
+<h4>Pharmacy Information</h4>
+
+<div class="list">
+  <div class="list">
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Pharmacy Name</span>
+    <input class="profile-input" type="text" ng-model="Profile.PharmacyName">
+  </label>
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">City</span>
+    <input class="profile-input" type="text" ng-model="Profile.PharmacyCity">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Zipcode</span>
+    <input class="profile-input" type="text" ng-model="Profile.PharmacyZipcode">
+  </label>
+</div>
+
+
+<div class="QuestionMargin">
+<h4 >Payment Information</h4>
+
+<div class="list">
+
+<label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Credit Card Number</span>
+    <input class="profile-input" type="text" ng-model="Profile.CreditCardNumber">
+  </label>
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label profile-span">Expiration Date</span>
+    <input class="profile-input" type="text" ng-model="Profile.ExpirationDate">
+  </label>
+
+  <label class="item item-input  item-stacked-label">
+    <span class="input-label profile-span">Name on the Card</span>
+    <input class="profile-input" type="text" ng-model="Profile.CardName">
+  </label>
+
+  <label class="item item-input  item-stacked-label">
+    <span class="input-label profile-span">CVV</span>
+    <input class="profile-input" type="text" ng-model="Profile.CVV">
+  </label>
+</div>
+
+
 
 <button ng-click="submit()" class="button button-block button-positive"> Save</button>
 <!-- <super-navigate location="example#allergy-info">
