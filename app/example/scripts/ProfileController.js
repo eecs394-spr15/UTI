@@ -23,8 +23,9 @@ angular
   			$scope.currentUser.set("profile",JSON.stringify($scope.Profile));
   				$scope.currentUser.save(null, {     //save profile object to database
 	            success: function(user) {
-	           	supersonic.ui.dialog.alert("Survey has been Sent");
+	           	supersonic.ui.dialog.alert("Profile information saved");
 	           	$scope.$apply();
+              supersonic.ui.layers.pop();
 	            },
 			      error: function(user, error) {
 			        supersonic.ui.dialog.alert("Error: " + error.message);
