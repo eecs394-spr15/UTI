@@ -1,0 +1,105 @@
+<super-navbar>
+  <super-navbar-title>
+    Submit UTI Report
+  </super-navbar-title>
+</super-navbar>
+
+<div class="padding" ng-controller ="ProfileController">
+
+<div class="QuestionMargin">
+  <h4>Category 1</h4>
+</div>
+
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Are you pregnant?
+    </div>
+    <select>
+      <option selected>No</option>
+      <option>Yes</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Do you see blood in your Urine?
+    </div>
+    <select>
+      <option selected>No</option>
+      <option>Yes</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Do you have a fever (>100.4F or >38C)?
+    </div>
+    <select>
+      <option selected>No</option>
+      <option>Yes</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Do you have new back or flank (side of back) pain?
+    </div>
+    <select>
+      <option selected>No</option>
+      <option>Yes</option>
+    </select>
+  </label>
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Do you have vaginal itching, burning, or discharge?
+    </div>
+    <select>
+      <option selected>No</option>
+      <option>Yes</option>
+    </select>
+  </label>
+
+</div>
+
+<div class="QuestionMargin">
+<h4>Category 2</h4>
+</div>
+<h6>Check all that apply</h6>
+
+<div class="list">
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Burning or pain with Urination
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Increased frequency of urination
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Increaased urgency of urination
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Discomfort or pressure in the lower abdomen
+  </li>
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Foul smelling or cloudy urine
+  </li>
+</div>
+
+  <super-navigate location="example#RootView">
+    <button ng-click="reportUTI()" class="button button-block button-calm">Submit</button>
+  </super-navigate>
+
+</div>
