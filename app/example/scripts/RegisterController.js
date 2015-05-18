@@ -9,6 +9,7 @@ angular
 		        user.set("username", $scope.newUser.username);
 		        user.set("password", $scope.newUser.password1);
 		        user.set("email", $scope.newUser.email);
+		        user.set("profile", "{}");
 		        user.signUp(null, {
 		      success: function(user) {
 		        $scope.currentUser = user;
