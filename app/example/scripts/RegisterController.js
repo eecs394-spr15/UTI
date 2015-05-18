@@ -3,7 +3,7 @@ angular
   .controller('RegisterController', function($scope, $location,supersonic) {
   		
   		$scope.currentUser = Parse.User.current();
-  	$scope.signUp = function(){
+  	$scope.signUp = function(){		
         if($scope.newUser.password1===$scope.newUser.password2){
 		        var user = new Parse.User();
 		        user.set("username", $scope.newUser.username);
@@ -14,7 +14,7 @@ angular
 		        $scope.currentUser = user;
 		        $scope.$apply();
 		        supersonic.ui.dialog.alert("You have successfully signed up!");
-		        $scope.logIn();
+		        $scope.logIn();				// save to localStroage
 		        supersonic.ui.initialView.dismiss();
 
 		        
