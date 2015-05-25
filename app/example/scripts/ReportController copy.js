@@ -14,6 +14,7 @@ angular
         
         $scope.Category.now = new Date().toDateString();
         utiCase.set("createdBy",Parse.User.current());
+        utiCase.set("status","Pending");
         utiCase.set("questionnaire",JSON.stringify($scope.Category));
                 utiCase.save(null, {     //save profile object to database
                 success: function(user) {

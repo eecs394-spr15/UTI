@@ -16,7 +16,9 @@ angular
         success: function(results) {
           $scope.cases = results;
           for (var i = results.length - 1; i >= 0; i--) {
+            var row = results[i];
             results[i] = JSON.parse(results[i].get("questionnaire"));
+            results[i].status = row.get("status");
             //results[i].now = new Date(results[i].now);
           };
           $scope.$apply();
