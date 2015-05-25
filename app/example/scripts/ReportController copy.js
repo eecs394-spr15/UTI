@@ -9,18 +9,27 @@ angular
     $scope.$apply();
 
     $scope.reportUTI=function(){
-        // $scope.refresh();
-        //  $scope.currentUser.set("submitted",true);
-        // $scope.currentUser.save(null, {
-        //   success: function(user) {
-        //     alert("Successfully submitted. You can track the status of your UTI from the main page.");
-        //   },
-        //   error: function(user, error) {
-        //     supersonic.ui.dialog.alert("Error: " + error.message);
-        // } 
-        // });
-        alert("Test!");
+        var UTIcase = Parse.Object.extend("Case");
+        var utiCase = new UTIcase();
+        
+        utiCase.set("createdBy",Parse.User.current());
+        utiCase.set("questionnaire",JSON.stringify($scope.Category));
+                utiCase.save(null, {     //save profile object to database
+                success: function(user) {
+                supersonic.ui.dialog.alert("New case submitted");
+                $scope.$apply();
+                },
+                  error: function(user, error) {
+                    supersonic.ui.dialog.alert("Error: " + error.message);
+                  }
+              });
+          $scope.refresh();
     };
+
+
+
+
+
 
     $scope.checkStatus =function(){
         $scope.refresh();
@@ -28,4 +37,9 @@ angular
         else supersonic.ui.dialog.alert("You have not submitted a UIT report yet.");
     };
 
+    $scope.refresh = function(){
+                Parse.User.current().fetch();
+                $scope.currentUser = Parse.User.current();
+                $scope.$apply();
+      };
  });

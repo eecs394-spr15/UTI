@@ -4,7 +4,7 @@
   </super-navbar-title>
 </super-navbar>
 
-<div class="padding" ng-controller ="ProfileController">
+<div class="padding" ng-controller ="ReportController">
 
 <div class="QuestionMargin">
   <h4>Category 1</h4>
@@ -16,8 +16,8 @@
     <div class="input-label">
       Are you pregnant?
     </div>
-    <select>
-      <option disabled selected> -- Select an option -- </option>
+    <select ng-model="Category.pregnant">
+      <option disabled selected > -- Select an option -- </option>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -26,8 +26,8 @@
     <div class="input-label">
       Do you see blood in your Urine?
     </div>
-    <select>
-      <option disabled selected> -- Select an option -- </option>
+    <select ng-model="Category.blood">
+      <option disabled selected > -- Select an option -- </option>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -36,8 +36,8 @@
     <div class="input-label">
       Do you have a fever (>100.4F or >38C)?
     </div>
-    <select>
-      <option disabled selected> -- Select an option -- </option>
+    <select ng-model="Category.fever">
+      <option disabled selected > -- Select an option -- </option>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -46,8 +46,8 @@
     <div class="input-label">
       Do you have new back or flank (side of back) pain?
     </div>
-    <select>
-      <option disabled selected> -- Select an option -- </option>
+    <select ng-model="Category.flank">
+      <option disabled selected > -- Select an option -- </option>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -56,8 +56,8 @@
     <div class="input-label">
       Do you have vaginal itching, burning, or discharge?
     </div>
-    <select>
-      <option disabled selected> -- Select an option -- </option>
+    <select ng-model="Category.vaginal">
+      <option disabled selected > -- Select an option -- </option>
       <option>No</option>
       <option>Yes</option>
     </select>
@@ -73,38 +73,38 @@
 <div class="list">
   <li class="item item-checkbox">
      <label class="checkbox">
-       <input type="checkbox">
+       <input type="checkbox" ng-model="Category.dysuria">
      </label>
      Burning or pain with urination
   </li>
   <li class="item item-checkbox">
      <label class="checkbox">
-       <input type="checkbox">
+       <input type="checkbox" ng-model="Category.frequency">
      </label>
      Increased frequency of urination
   </li>
   <li class="item item-checkbox">
      <label class="checkbox">
-       <input type="checkbox">
+       <input type="checkbox" ng-model="Category.urgency">
      </label>
      Increaased urgency of urination
   </li>
   <li class="item item-checkbox">
      <label class="checkbox">
-       <input type="checkbox">
+       <input type="checkbox" ng-model="Category.suprapubi">
      </label>
      Discomfort or pressure in the lower abdomen
   </li>
   <li class="item item-checkbox">
      <label class="checkbox">
-       <input type="checkbox">
+       <input type="checkbox" ng-model="Category.foul">
      </label>
      Foul smelling or cloudy urine
   </li>
 </div>
 
-  <super-navigate location="example#RootView">
+ <super-navigate>
     <button ng-click="reportUTI()" class="button button-block button-calm">Submit</button>
-  </super-navigate>
+</super-navigate>
 
 </div>
