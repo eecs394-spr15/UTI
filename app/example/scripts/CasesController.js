@@ -14,24 +14,16 @@ angular
       query.equalTo("createdBy", Parse.User.current());
       query.find({
         success: function(results) {
-          // for(var i = 0; i < results.length; i++){
-          //   results[i].questionnaire = 1;
-          // }
           $scope.cases = results;
+          for (var i = results.length - 1; i >= 0; i--) {
+            results[i] = JSON.parse(results[i].get("questionnaire"));
+          };
           $scope.$apply();
-          //alert("Successfully retrieved " + results.length + " users.");
-          // Do something with the returned Parse.Object values
-          //for (var i = 0; i < results.length; i++) { 
-          //  var object = results[i];
-          //  alert(object.id + ' - ' + object.get('username'));
-          //}
         },
         error: function(error) {
           //alert("Error: " + error.code + " " + error.message);
         }
       });
-
-      //$scope.CasesQuestionnaire = $scope.currentUser.get("cases").get("questionnaire");
 
       $scope.$apply();
  });
