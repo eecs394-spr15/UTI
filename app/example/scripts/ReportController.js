@@ -49,15 +49,31 @@ angular
               $scope.Category.objectId = results[0].id;
               $scope.Category.status = results[0].get("status");
               $scope.Category.msg = "";
-              if($scope.Category.status == "Approved"){
-                $scope.Category.msg = "You can drop off your urine sample and your medication ANITBIOTICS NAME is ready for pick up at you pharmacy";
-              }
+                switch($scope.Category.status){
+                    case "Pending":
+                        $scope.Category.msg = "You have already submitted your report to the nurse. Please wait to check out the suggestion.";
+                        break;
+                    case "Approved":
+                        $scope.Category.msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy";
+                        break;
+                    case "Results Pending":
+                        $scope.Category.msg = "You have to wait for your result coming out from your pharmacy.";
+                        break;
+                    case "Results Available":
+                        $scope.Category.msg = "The result is coming out. You can go to check the following result now.";
+                        break;
+                    case "Closed":
+                        $scope.Category.msg = "You have already completed the whole report. Thank you for using AmamdaCare!";
+                        break;
+                    default:
+                        break;
+                }
               $scope.$apply();
             },
-            error: function(error) {
+          error: function(error) {
               //alert("Error: " + error.code + " " + error.message);
-            }
-          });
+          }
+      });
     });
 
 
