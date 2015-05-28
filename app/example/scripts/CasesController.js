@@ -21,9 +21,16 @@ angular
             results[i].objectId = row.id;
             results[i].status = row.get("status");
             results[i].createdBy = row.get("createdBy");
-            results[i].msg = "FALSE";
-            if(results[i].status == "Approved"){
-              results[i].msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy";
+            switch(results[i].status){
+              case "Approved":
+                results[i].msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy";
+                break;
+              case "Results Pending":
+                break;
+              case "Results Available":
+                break;
+              default:
+                break;
             }
             //results[i].now = new Date(results[i].now);
           };
