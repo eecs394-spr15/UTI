@@ -21,6 +21,10 @@ angular
             results[i].objectId = row.id;
             results[i].status = row.get("status");
             results[i].createdBy = row.get("createdBy");
+            results[i].msg = "FALSE";
+            if(results[i].status == "Approved"){
+              results[i].msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy";
+            }
             //results[i].now = new Date(results[i].now);
           };
           $scope.$apply();
