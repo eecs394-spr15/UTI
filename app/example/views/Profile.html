@@ -20,9 +20,15 @@
     <input class="profile-input" type="text" ng-model="Profile.lastName">
   </label>
 
-    <label class="item item-input">
-    <span class="input-label profile-span">Gender</span>
-    <input class="profile-input" type="text" ng-model="Profile.gender">
+  <label class="item item-input item-select">
+    <!-- <span class="input-label profile-span">Gender</span> -->
+    <div class="input-label">Gender</div>
+    <select>
+      <option selected> </option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+    <!-- <input class="profile-input" type="text" ng-model="Profile.gender"> -->
   </label>
 
   <label class="item item-input item-select">
