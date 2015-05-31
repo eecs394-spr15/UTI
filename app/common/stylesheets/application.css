@@ -36,3 +36,15 @@
 .profile-input{
 	text-align: right;
 }
+#profile{
+	width:25px;
+}
+
+.avatar-image{
+ 	width:50%;
+ 	border-radius: 25px;
+}
+
+img {
+    width: 100%;
+}

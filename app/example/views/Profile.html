@@ -6,48 +6,56 @@
 
 <div class="padding" ng-controller ="ProfileController">
 
-  <h4>Basic Information</h4>
+    <img class="yayay"src="{{dataURL}}">
 
+    <h4>Basic Information</h4>
     <div class="list">
+      <label class="item item-input">
+        <span class="input-label profile-span">First Name</span>
+        <input class="profile-input" type="text" ng-model="Profile.firstName">
+      </label>
 
-    <label class="item item-input">
-    <span class="input-label profile-span">First Name</span>
-    <input class="profile-input" type="text" ng-model="Profile.firstName">
-    </label>
+      <label class="item item-input">
+        <span class="input-label profile-span">Last Name</span>
+        <input class="profile-input" type="text" ng-model="Profile.lastName">
+      </label>
 
-  <label class="item item-input">
-    <span class="input-label profile-span">Last Name</span>
-    <input class="profile-input" type="text" ng-model="Profile.lastName">
-  </label>
+      <label class="item item-input item-select">
+        <!-- <span class="input-label profile-span">Gender</span> -->
+        <div class="input-label">Gender</div>
+        <select>
+          <option selected> </option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <!-- <input class="profile-input" type="text" ng-model="Profile.gender"> -->
+      </label>
 
-  <label class="item item-input item-select">
-    <!-- <span class="input-label profile-span">Gender</span> -->
-    <div class="input-label">Gender</div>
-    <select>
-      <option selected> </option>
-      <option>Male</option>
-      <option>Female</option>
-    </select>
-    <!-- <input class="profile-input" type="text" ng-model="Profile.gender"> -->
-  </label>
+      <label class="item item-input item-select">
 
-  <label class="item item-input item-select">
+        <div class="input-label">
+          Race
+        </div>
+        <select ng-model="Profile.race">
+          <option selected>White</option>
+          <option>American Indian or Alaska Native</option>
+          <option>Asian</option>
+          <option>Black or African American</option>
+          <option>Native Hawaiian or Other Pacific Islanders</option>
+          <option>Hispanic or Latino</option>
+          <option>Other</option>
+        </select>
+      </label>
 
-    <div class="input-label">
-      Race
+      <label class="item item-input item-icon-right">
+       <div class="input-label" >Pictures
+          <i class="icon super-camera" ng-click="clickOnUpload()"></i>
+        </div>
+      </label>
     </div>
-    <select ng-model="Profile.race">
-      <option selected>White</option>
-      <option>American Indian or Alaska Native</option>
-      <option>Asian</option>
-      <option>Black or African American</option>
-      <option>Native Hawaiian or Other Pacific Islanders</option>
-      <option>Hispanic or Latino</option>
-      <option>Other</option>
-    </select>
-  </label>
+<input id="file1" type="file" ng-show=false ng-model="picture.path" >
 
-</div>
+<button ng-click="UpLoadPhoto()" class="button button-block button-positive"> Save</button>
 
 <div class="QuestionMargin">
 <h4 >Home Address</h4>
@@ -311,10 +319,6 @@
   </label>
 </div>
     </div>
-
-
-
-<button ng-click="submit()" class="button button-block button-positive"> Save</button>
 <!-- <super-navigate location="example#allergy-info">
   
 </super-navigate> -->

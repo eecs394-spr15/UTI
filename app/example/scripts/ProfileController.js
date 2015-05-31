@@ -1,8 +1,9 @@
 angular
   .module('example')
-  .controller('ProfileController', function($scope, supersonic) {
+  .controller('ProfileController', function($scope,$interval, supersonic) {
   		Parse.User.current().fetch();
       $scope.currentUser = Parse.User.current();
+      $scope.counter = 0;
 
       $scope.refresh = function(){
                 Parse.User.current().fetch();
@@ -34,7 +35,50 @@ angular
           $scope.refresh();
   		};
 
+      $scope.clickOnUpload = function () {
+          window.document.getElementById("file1").click(); 
+          $scope.myVar = setInterval($scope.UpLoadPhoto, 300);
+      };
 
+      $scope.UpLoadPhoto = function(){
+            var ele = document.getElementById('file1');
+            $scope.counter++;
+            if($scope.counter ==30) {
+              $scope.counter=0;
+              clearInterval($scope.myVar);
+            }
+            var fileUploadControl = document.getElementById('file1');
+            var reader = new FileReader();
+
+            reader.readAsDataURL(ele.files[0]);
+            reader.onload=function(){$scope.dataURL=reader.result};
+
+            $scope.$apply();
+            if (fileUploadControl.files.length > 0) {
+              var file = fileUploadControl.files[0];
+              var name = "photo.jpg";
+              var base64 = $scope.dataURL.split('base64,')[1];
+              var parseFile = new Parse.File(name, { base64: base64 }); 
+            }
+            parseFile.save().then(function() {
+                $scope.currentUser.set("photo",parseFile);
+                $scope.currentUser.save(null, {     //save profile object to database
+                  success: function(user) {
+                    clearInterval($scope.myVar);
+                    supersonic.ui.dialog.alert("Profile photo saved");
+                    $scope.$apply();
+                  },
+                error: function(user, error) {
+                  supersonic.ui.dialog.alert("Error: " + error.message);
+                }
+            });
+
+            $scope.refresh();
+            }, function(error) {
+              // The file either could not be read, or could not be saved to Parse.
+            });
+      };
+      $scope.dataURL = $scope.currentUser.get("photo").url();
       $scope.Profile = JSON.parse($scope.currentUser.get("profile"));
       $scope.$apply();
  });
