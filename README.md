@@ -7,6 +7,7 @@ AmandaCare requires two front ends (patient and nurse) and UTI repository provid
 
 
 ## INSTALLATION
+
 1. First step is to install Steroids.
 > Follow the [instructions](https://academy.appgyver.com/installwizard/steps#/home) for getting and installing Supersonic
 
@@ -16,14 +17,17 @@ $git clone https://github.com/eecs394-spr15/UTI.git
 >```
 3. In case you wish to run the codes on a simulator, you can run the following command in the corresponding directory
 `$ steroids connect`
-If Steroids asks for an update, you can run this command before connecting to Steroids
+*If Steroids asks for an update, you can run this command before connecting to Steroids*
 `$ steroids update`
 4. Finally you can run simulator on your computer or download **AppGyver Scanner** in the App Store on your mobile side.
 
 
 
 ## Building
-1. Parse
+
+1. You have to create a [Parse account](https://www.parse.com/signup) to store the data.
+2. Make sure you never include your master key in any binary.
+>Keys: Puts cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.
 
 ## Deployment
 
