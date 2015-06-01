@@ -65,6 +65,8 @@ angular
                     case "Closed":
                         $scope.Category.msg = "You have already completed the whole report. Thank you for using AmamdaCare!";
                         break;
+                    case "Denied":
+                        $scope.Category.msg = "Your nurse strongly suggests you visit your local clinic - your symptoms are too severe to be prescribed anything remotely."
                     default:
                         break;
                 }
