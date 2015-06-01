@@ -7,6 +7,7 @@ angular
       $scope.refresh = function(){
                 Parse.User.current().fetch();
                 $scope.currentUser = Parse.User.current();
+                $scope.Profile = JSON.parse($scope.currentUser.get("profile"));
                 $scope.$apply();
       };
 
@@ -20,6 +21,7 @@ angular
   			// else if ($scope.Profile.state==null) {supersonic.ui.dialog.alert("State Needed");return;}
   			// else if ($scope.Profile.zipCode==null||$scope.Profile.zipCode=="") {supersonic.ui.dialog.alert("Zip Code Needed");return;};
 
+        //alert($scope.Profile.past1);
   			$scope.currentUser.set("profile",JSON.stringify($scope.Profile));
   				$scope.currentUser.save(null, {     //save profile object to database
 	            success: function(user) {
