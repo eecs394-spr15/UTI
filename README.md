@@ -9,7 +9,7 @@ AmandaCare requires two front ends (patient and nurse) and UTI repository provid
 ## INSTALLATION
 
 1. First step is to install Steroids.
-> Follow the [instructions](https://academy.appgyver.com/installwizard/steps#/home) for getting and installing Supersonic
+>Follow the [instructions](https://academy.appgyver.com/installwizard/steps#/home) for getting and installing Supersonic
 
 2. The next step is to make a folder on your local machine by cloning.
 >```bash
@@ -27,7 +27,8 @@ $git clone https://github.com/eecs394-spr15/UTI.git
 
 1. You have to create a [Parse account](https://www.parse.com/signup) to store the data.
 2. Make sure you never include your master key in any binary.
->Keys: Puts cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.
+
+*Keys: Put cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.*
 
 ## Deployment
 
