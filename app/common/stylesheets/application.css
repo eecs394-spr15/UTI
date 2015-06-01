@@ -34,5 +34,6 @@
 }
 
 .profile-input{
-	text-align: right;
+	text-align: left;
+	overflow: hidden;
 }
