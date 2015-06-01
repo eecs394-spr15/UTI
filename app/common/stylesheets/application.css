@@ -37,3 +37,8 @@
 	text-align: left;
 	overflow: hidden;
 }
+
+.profile-free-input{
+	width: 20px;
+	overflow: scroll;
+}
