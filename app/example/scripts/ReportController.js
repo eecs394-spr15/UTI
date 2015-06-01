@@ -54,7 +54,7 @@ angular
                         $scope.Category.msg = "You have already submitted your report to the nurse. Please wait to check out the suggestion.";
                         break;
                     case "Approved":
-                        $scope.Category.msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy";
+                        $scope.Category.msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy.";
                         break;
                     case "Results Pending":
                         $scope.Category.msg = "You have to wait for your result coming out from your pharmacy.";

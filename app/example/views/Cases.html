@@ -10,13 +10,14 @@
 
 <div class="list">
 
-<label class="item item-input" ng-repeat="case in cases">
-	<super-navigate location="example#Case" data-params-id="{{ case.objectId }}">
-    <span class="input-label profile-span">{{ case.now }}</span>
+<!--label class="item item-input" ng-repeat="case in cases"-->
+	<super-navigate location="example#Case" ng-repeat="case in cases" data-params-id="{{ case.objectId }}">
+        <button class="button button-block"><span style="float:left">{{case.now}}</span><span style="float:right">{{case.status}}</span></button>
+    <!--span class="input-label profile-span">{{ case.now }}</span>
     <!-- <i class="super-checkmark-round" style="float:right;"></i> -->
-    <p>{{ case.status }}</p>
+    <!--p>{{ case.status }}</p-->
     </super-navigate>
-  </label>
+  <!--/label-->
 
 
 </div>
