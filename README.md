@@ -4,7 +4,11 @@
 AmandaCare requires two front ends (patient and nurse) and UTI repository provides codes for the patient side of the application.
 
 ## SYSTEM REQUIREMENTS
-
+* iOS 8.0.0
+* Angular JS 
+* Parse 
+* nodejs
+* Steroids
 
 ## INSTALLATION
 
@@ -30,10 +34,10 @@ $git clone https://github.com/eecs394-spr15/UTI.git
 
 ## DEPLOYMENT
 
-For the basic deployment steps for both Android and iOS,
+For the basic deployment steps,
 >Follow the [Supersonic deployment instructions](http://docs.appgyver.com/tooling/build-service/build-settings/deploying-to-cloud/).
 
-For iOS, you need to create an ad hoc build.
+You also need to create an ad hoc build.
 >Follow the instructions for [an ad hoc build](http://docs.appgyver.com/tooling/build-service/build-settings/building-a-debug-build/) This type of app can be installed on devices for testing but can't be placed on the Apple App Store. Distribution versions need approval from Apple for the App Store for enterprise-level distribution. Approval can take weeks.
 
 **Pay Attention:To deploy to iOS, you must have an Apple developer license, and a Macintosh with the current version of MacOS and Xcode. Xcode is a free download from Apple, but developer licenses cost about $100 per year.**
