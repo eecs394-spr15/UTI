@@ -4,12 +4,6 @@ angular
   		Parse.User.current().fetch();
       $scope.currentUser = Parse.User.current();
 
-      $scope.refresh = function(){
-                Parse.User.current().fetch();
-                $scope.currentUser = Parse.User.current();
-                $scope.$apply();
-      };
-
       var query = new Parse.Query("Case");
       query.equalTo("createdBy", Parse.User.current());
       query.find({

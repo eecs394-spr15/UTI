@@ -20,12 +20,6 @@ angular
         $scope.$apply();
     };
 
-      $scope.refresh = function(){
-                Parse.User.current().fetch();
-                $scope.currentUser = Parse.User.current();
-                $scope.$apply();
-      };
-
   	$scope.logOut = function(){
   		Parse.User.logOut();
   		//localStorage.clear();
@@ -34,7 +28,6 @@ angular
   	};
 
     $scope.reportUTI=function(){
-        $scope.refresh();
         if($scope.currentUser.get("submitted")!=true) $scope.currentUser.set("submitted",true);
         else $scope.currentUser.set("submitted",false);
         if($scope.currentUser.get("submitted")==true) {
@@ -58,7 +51,6 @@ angular
     };
 
     $scope.checkStatus =function(){
-        $scope.refresh();
         if($scope.currentUser.get("approved")) supersonic.ui.dialog.alert($scope.currentUser.get("approved"));
         else supersonic.ui.dialog.alert("You have not submitted a UIT report yet.");
     };

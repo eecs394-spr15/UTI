@@ -12,12 +12,6 @@ angular
 		Parse.User.logIn(userName,password);
 	}; //change later
 
-      $scope.refresh = function(){
-                Parse.User.current().fetch();
-                $scope.currentUser = Parse.User.current();
-                $scope.$apply();
-      };
-
 	$scope.logIn = function(){					// check username and password from parse cloud, 
 												// and I believe this stores user to localStorage
 	    Parse.User.logIn($scope.existingUser.username, $scope.existingUser.password, {
@@ -27,8 +21,7 @@ angular
 	           	supersonic.ui.initialView.dismiss();
 	           	supersonic.ui.dialog.alert("successfully logged in");
 	           	$scope.saveToLocal();
-	           	$scope.reset();			// syc view and model data immediately
-	           	$scope.refresh(); 	           					
+	           	$scope.reset();			// syc view and model data immediately           					
 	            }
 	          });
 	        },

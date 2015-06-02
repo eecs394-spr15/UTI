@@ -42,3 +42,9 @@
 	width: 20px;
 	overflow: scroll;
 }
+.img-profile{
+	width: 100%;
+	border-style: solid;
+    border-width: medium;
+    border-color: grey;
+}

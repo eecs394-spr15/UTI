@@ -32,7 +32,7 @@ angular
                     supersonic.ui.dialog.alert("Error: " + error.message);
                   }
               });
-          $scope.refresh();
+          $scope.$apply();
           supersonic.ui.layers.pop();
     };
 
@@ -80,14 +80,8 @@ angular
 
 
     $scope.checkStatus =function(){
-        $scope.refresh();
         if($scope.currentUser.get("approved")) supersonic.ui.dialog.alert($scope.currentUser.get("approved"));
         else supersonic.ui.dialog.alert("You have not submitted a UIT report yet.");
     };
 
-    $scope.refresh = function(){
-                Parse.User.current().fetch();
-                $scope.currentUser = Parse.User.current();
-                $scope.$apply();
-      };
  });

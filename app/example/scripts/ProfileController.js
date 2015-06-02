@@ -4,12 +4,6 @@ angular
   		Parse.User.current().fetch();
       $scope.currentUser = Parse.User.current();
 
-      $scope.refresh = function(){
-                Parse.User.current().fetch();
-                $scope.currentUser = Parse.User.current();
-                $scope.Profile = JSON.parse($scope.currentUser.get("profile"));
-                $scope.$apply();
-      };
 
   		$scope.submit =function(){
   			// if ($scope.Profile.firstName==null || $scope.Profile.firstName=="") {supersonic.ui.dialog.alert("First Name Needed");return;}
@@ -33,7 +27,7 @@ angular
 			        supersonic.ui.dialog.alert("Error: " + error.message);
 			      }
 	          });
-          $scope.refresh();
+          $scope.$apply();
   		};
 
 
