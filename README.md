@@ -15,16 +15,16 @@ AmandaCare requires two front ends (patient and nurse) and UTI repository provid
 >```bash
 $git clone https://github.com/eecs394-spr15/UTI.git
 >```
-3. This application requires a back-end server to store user data. You can create a [Parse account](https://www.parse.com/signup) for this back-end purpose.
+3. This application requires a back-end server to store user data. 
+>You can create a [Parse account](https://www.parse.com/signup) for this back-end purpose.
 
-  >*Keys: Make sure you never include your master key in any binary. Put cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.*
+  *NOTE: Make sure you never include your Parse master key in any binary. Put cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.*
 
-
-Note: In case you wish to run the codes on a simulator, you can run the following command in the corresponding directory
+4. In case you wish to run the codes on a simulator, you can run the following command in the corresponding directory
 `$ steroids connect`
 *If Steroids asks for an update, you can run this command before connecting to Steroids*
 `$ steroids update`
- Finally you can run simulator on your computer or download **AppGyver Scanner** in the App Store on your mobile side.
+5. Finally you can run simulator on your computer or download **AppGyver Scanner** in the App Store on your mobile side.
 
 
 
