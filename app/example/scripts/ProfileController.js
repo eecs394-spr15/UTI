@@ -29,7 +29,41 @@ angular
 	          });
           $scope.$apply();
   		};
+       $scope.clickOnUpload = function () {
+          $scope.$apply();
+          window.document.getElementById("file1").click();
+          $scope.myVar= setInterval($scope.UpLoadPhoto,1000); 
+      };
 
+      $scope.UpLoadPhoto = function(){
+            var fileUploadControl = document.getElementById('file1');
+            if (fileUploadControl.files.length > 0) {
+              var reader = new FileReader();
+              reader.readAsDataURL(fileUploadControl.files[0]);
+              reader.onload=function(){
+              $scope.dataURL=reader.result;
+              var file = fileUploadControl.files[0];
+              var name = "photo.jpg";
+              var base64 = $scope.dataURL.split('base64,')[1];
+              $scope.parseFile = new Parse.File(name, { base64: base64 }); 
+              $scope.parseFile.save(null, {     //save profile object to database
+              success: function(user) {
+                  //clearInterval($scope.myVar);
+                  alert("Photo Uploaded");
+                  $scope.currentUser.set("photo",$scope.parseFile);
+                  $scope.currentUser.save();
+              },
+            error: function(user, error) {
+              supersonic.ui.dialog.alert("Error: " + error.message);
+            }
+            });
+              
+              
+            }
+        };
+              $scope.$apply();
+      };
+      $scope.dataURL = $scope.currentUser.get("photo").url();
 
       $scope.Profile = JSON.parse($scope.currentUser.get("profile"));
       $scope.$apply();
