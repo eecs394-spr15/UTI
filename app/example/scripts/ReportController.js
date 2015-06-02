@@ -50,13 +50,14 @@ angular
               $scope.Category=JSON.parse(results[0].get("questionnaire"));
               $scope.Category.objectId = results[0].id;
               $scope.Category.status = results[0].get("status");
+              $scope.Category.antibiotic = results[0].get("antibiotic");
               $scope.Category.msg = "";
                 switch($scope.Category.status){
                     case "Pending":
                         $scope.Category.msg = "You have already submitted your report to the nurse. Please wait to check out the suggestion.";
                         break;
                     case "Approved":
-                        $scope.Category.msg = "You can drop off your urine sample and your medication [ANITBIOTICS_NAME] is ready for pick up at your pharmacy.";
+                        $scope.Category.msg = "You can drop off your urine sample and your medication is ready for pick up at your pharmacy. Your prescribed treatment is " + $scope.Category.antibiotic;
                         break;
                     case "Results Pending":
                         $scope.Category.msg = "You have to wait for your result coming out from your pharmacy.";
