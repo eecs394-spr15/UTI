@@ -36,8 +36,8 @@ angular
       };
 
       $scope.UpLoadPhoto = function(){
-             var fileUploadControl = document.getElementById('file1');
-          var reader = new FileReader();
+            var fileUploadControl = document.getElementById('file1');
+      var reader = new FileReader();
             reader.readAsDataURL(fileUploadControl.files[0]);
             reader.onload=function(){
             $scope.dataURL=reader.result;
@@ -48,11 +48,9 @@ angular
               $scope.parseFile = new Parse.File(name, { base64: base64 }); 
               $scope.parseFile.save();
             }
-            $scope.$apply();
-    };
-  };
+          };
+      };
       $scope.dataURL = $scope.currentUser.get("photo").url();
-
       $scope.Profile = JSON.parse($scope.currentUser.get("profile"));
       $scope.$apply();
  });
