@@ -4,6 +4,7 @@ angular
   		Parse.User.current().fetch();
       $scope.currentUser = Parse.User.current();
 
+      steroids.logger.log(JSON.stringify($scope.currentUser));
 
   		$scope.submit =function(){
   			
