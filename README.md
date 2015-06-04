@@ -6,8 +6,8 @@ AmandaCare is a mobile application that helps those who are suspicious of having
 ## SYSTEM REQUIREMENTS
 * iOS 8.0.0+
 * [AngularJS 1.3+](https://github.com/angular/angular.js)
-* [ParseJS 1.4.2+](https://parse.com/downloads/javascript/parse-1.4.2.min.js)
-* [NodeJS 0.12.0+](https://nodejs.org/)
+* [Parse.js 1.4.2+](https://parse.com/downloads/javascript/parse-1.4.2.min.js)
+* [Node.js 0.12.0+](https://nodejs.org/)
 * [AppGyver Steroids](http://www.appgyver.com/steroids)
 
 ## INSTALLATION
