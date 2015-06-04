@@ -31,7 +31,6 @@ $git clone https://github.com/eecs394-spr15/UTI.git
 5. Finally you can run simulator on your computer or download **AppGyver Scanner** in the App Store on your mobile side.
 
 
-
 ## DEPLOYMENT
 
 For the basic deployment steps,
@@ -41,3 +40,13 @@ You also need to create an ad hoc build.
 >Follow the instructions for [an ad hoc build](http://docs.appgyver.com/tooling/build-service/build-settings/building-a-debug-build/) This type of app can be installed on devices for testing but can't be placed on the Apple App Store. Distribution versions need approval from Apple for the App Store for enterprise-level distribution. Approval can take weeks.
 
 **Pay Attention:To deploy to iOS, you must have an Apple developer license, and a Macintosh with the current version of MacOS and Xcode. Xcode is a free download from Apple, but developer licenses cost about $100 per year.**
+
+## ISSUES & LIMITATIONS
+* This application only works on iOS8
+
+## FEATURES TO BE ADDED
+* Credit card needs actual security measures
+* Connection with pharmacy, actual integration
+* Nurse individual login
+* Enter zip code for nearby pharmacy
+* Patient survey before receiving result
