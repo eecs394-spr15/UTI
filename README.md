@@ -3,7 +3,7 @@
 ## DESCRIPTION
 AmandaCare is a mobile application that helps those who are suspicious of having a UTI to conveniently submit their symptoms for a quick diagnosis. AmandaCare requires two front ends (patient and nurse) and the UTI repository provides the code for the patient side of the application. The key components of the patient front end include symptom submission, viewing current and past cases, recieving electronic prescriptions via email and filling out basic personal/medical information.
 ## STORYBOARD
-![Image of Yaktocat](http://i.imgur.com/SKZOS9P.jpg?1)
+![Image of Yaktocat](http://i.imgur.com/qhkuQzg.png?1)
 ## SYSTEM REQUIREMENTS
 * iOS 8.0.0+
 * [AngularJS 1.3+](https://github.com/angular/angular.js)
@@ -21,7 +21,10 @@ AmandaCare is a mobile application that helps those who are suspicious of having
 $git clone https://github.com/eecs394-spr15/UTI.git
 >```
 3. This application requires a back-end server to store user data. 
->You can create a [Parse account](https://www.parse.com/signup) for this back-end purpose.
+  * You can create a [Parse account](https://www.parse.com/signup) for this back-end purpose.
+  * Onthe parse cloud, you need to create two object classes:
+    * User class, which is used for storing user information.
+    * Case class, which is used for storing all reported cases information.
 
   *NOTE: Make sure you never include your Parse master key in any binary. Put cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.*
 
