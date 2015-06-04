@@ -1,7 +1,7 @@
 # UTI
 
 ## DESCRIPTION
-AmandaCare requires two front ends (patient and nurse) and UTI repository provides codes for the patient side of the application.
+AmandaCare is a mobile application that helps those who are suspicious of UTI to conveniently submit their symptoms for a quick diagnosis. AmandaCare requires two front ends (patient and nurse) and UTI repository provides the codes for the patient side of the application. The key compoenets of patient front end includes symptom submission, viewing current and past cases, recieving electronic prescriptinos via email and filling out basic personal information.
 
 ## SYSTEM REQUIREMENTS
 * iOS 8.0.0
