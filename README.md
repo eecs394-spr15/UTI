@@ -4,11 +4,11 @@
 AmandaCare is a mobile application that helps those who are suspicious of having a UTI to conveniently submit their symptoms for a quick diagnosis. AmandaCare requires two front ends (patient and nurse) and the UTI repository provides the code for the patient side of the application. The key components of the patient front end include symptom submission, viewing current and past cases, recieving electronic prescriptions via email and filling out basic personal/medical information.
 
 ## SYSTEM REQUIREMENTS
-* iOS 8.0.0
-* Angular JS 
-* Parse 
-* nodejs
-* Steroids
+* iOS 8.0.0+
+* [AngularJS 1.3+](https://github.com/angular/angular.js)
+* [ParseJS 1.4.2+](https://parse.com/downloads/javascript/parse-1.4.2.min.js)
+* [NodeJS 0.12.0+](https://nodejs.org/)
+* [AppGyver Steroids](http://www.appgyver.com/steroids)
 
 ## INSTALLATION
 
