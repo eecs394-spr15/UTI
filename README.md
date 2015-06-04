@@ -4,6 +4,13 @@
 AmandaCare is a mobile application that helps those who are suspicious of having a UTI to conveniently submit their symptoms for a quick diagnosis. AmandaCare requires two front ends (patient and nurse) and the UTI repository provides the code for the patient side of the application. The key components of the patient front end include symptom submission, viewing current and past cases, recieving electronic prescriptions via email and filling out basic personal/medical information.
 ## STORYBOARD
 ![Image of Yaktocat](http://i.imgur.com/qhkuQzg.png?1)
+
+## CURRENT FEATURES
+* Register account and login with corresponding account.
+* After personal profile is filled, a UTI case could be report.
+* All cases reported for a patient are listed in the app.
+* Cases show whether it is aproved, pending, or denied.
+
 ## SYSTEM REQUIREMENTS
 * iOS 8.0.0+
 * [AngularJS 1.3+](https://github.com/angular/angular.js)
@@ -23,8 +30,8 @@ $git clone https://github.com/eecs394-spr15/UTI.git
 3. This application requires a back-end server to store user data. 
   * You can create a [Parse account](https://www.parse.com/signup) for this back-end purpose.
   * Onthe parse cloud, you need to create two object classes:
-    * User class, which is used for storing user information.
-    * Case class, which is used for storing all reported cases information.
+    * `User class, which is used for storing user information.`
+    * `Case class, which is used for storing all reported cases information.`
 
   *NOTE: Make sure you never include your Parse master key in any binary. Put cloudcode/config/global.json into their GLOBAL gitignore settings and remove the global.json file from all your github repos.*
 
@@ -46,7 +53,9 @@ You also need to create an ad hoc build.
 **Pay Attention:To deploy to iOS, you must have an Apple developer license, and a Macintosh with the current version of MacOS and Xcode. Xcode is a free download from Apple, but developer licenses cost about $100 per year.**
 
 ## ISSUES & LIMITATIONS
-* This application only works on iOS8
+* This application works on iOS8
+* Lower version of iOS system are not tested, it might work.
+* Android scanner are not tested, it might work.
 
 ## FEATURES TO BE ADDED
 * Credit card needs actual security measures
