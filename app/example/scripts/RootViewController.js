@@ -57,16 +57,4 @@ angular
 
  });
 
-    // $scope.getNewUserData =function(){
-    //  var query = new Parse.Query(Parse.User);
-   //      query.get($scope.currentUser.id, {
-   //        success: function(user) {
-   //           $scope.currentUser =user;// The object was retrieved successfully.
-   //           //supersonic.ui.dialog.alert("success in getting new user data");
-   //        },
-   //        error: function(object, error) {
-   //          supersonic.ui.dialog.alert("Error: " + error.message);// The object was not retrieved successfully.
-   //          // error is a Parse.Error with an error code and message.
-   //        }
-   //      });
-    // };
+
