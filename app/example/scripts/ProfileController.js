@@ -8,7 +8,10 @@ angular
   		$scope.submit =function(){
   			
   			$scope.currentUser.set("profile",JSON.stringify($scope.Profile));
-        $scope.currentUser.set("photo",$scope.parseFile);
+        var fileUploadControl = document.getElementById('file1');
+        if (fileUploadControl.files.length > 0) {
+          $scope.currentUser.set("photo",$scope.parseFile);
+        }
   				$scope.currentUser.save(null, {     //save profile object to database
 	            success: function(user) {
 	           	supersonic.ui.dialog.alert("Profile information saved");

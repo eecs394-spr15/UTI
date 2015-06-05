@@ -4,7 +4,7 @@ angular
   	 //Parse.User.logOut();						
   	 $scope.currentUser = Parse.User.current(); // Parse.User.current() read user object from cached localstorage
   	 $scope.master = {};						// Use for reset the Inputbox for username and password to empty.
-  	 
+  	 $scope.hi = 5;
     if($scope.currentUser) {
 		supersonic.ui.initialView.dismiss();	//if localStrorage has user already, dimiss login page
 		var userName = localStorage.getItem("userName");
@@ -14,11 +14,12 @@ angular
 
 	$scope.logIn = function(){					// check username and password from parse cloud, 
 												// and I believe this stores user to localStorage
-	    Parse.User.logIn($scope.existingUser.username, $scope.existingUser.password, {
+	    Parse.User.logIn("JiweiXia", "xjw", {
 	        success: function(user) {
 	          user.save(null, {					// save the row or an object to parse
 	            success: function(user) {		// each time you want data on cloud to change, need save it.
 	           	supersonic.ui.initialView.dismiss();
+	           	$scope.currentUser = user;
 	           	supersonic.ui.dialog.alert("successfully logged in");
 	           	$scope.saveToLocal();
 	           	$scope.reset();			// syc view and model data immediately           					

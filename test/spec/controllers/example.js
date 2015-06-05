@@ -8,18 +8,22 @@ describe("My First Test", function(){
 describe("example module", function () {
     beforeEach(module('example'));
 
-    describe("RootViewController", function () {
+    describe("LoginController", function () {
         var scope,
-            controller;
+            controller,
+            compile;
 
-        beforeEach(inject(function ($rootScope, $controller) {
+        beforeEach(inject(function ($compile,$rootScope, $controller) {
             scope = $rootScope.$new();
             controller = $controller;
+            compile=$compile;
+
         }));
 
         it("should assign UTIButtonMessage", function () {
-            controller("RootViewController", {$scope: scope});
-            expect(scope.UTIButtonMessage).toBe("Cancel UTI report");
+            controller("LoginController", {$scope: scope});
+            expect(scope.hi).toBe(5);
+
         });
     });
 });
