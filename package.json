@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "appium": "^1.4.1",
     "grunt-steroids": "1.x",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.35",
     "karma-chrome-launcher": "^0.1.12",
-    "karma-jasmine": "^0.3.5"
+    "karma-jasmine": "^0.3.5",
+    "parse-mock": "^1.1.4",
+    "sinon": "^1.14.1"
   }
 }

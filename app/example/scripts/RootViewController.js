@@ -5,8 +5,6 @@ angular
     //Parse.User.current().fetch();
     $scope.currentUser = Parse.User.current();
 
-    console.log(JSON.stringify($scope.currentUser));
-
     if($scope.currentUser.get("submitted")==true) $scope.UTIButtonMessage = "Cancel UTI report";
     else $scope.UTIButtonMessage = "Report a UTI";
 
