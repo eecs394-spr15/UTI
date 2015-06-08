@@ -62,8 +62,8 @@ describe("example module", function () {
 
                 $scope.submit();
 
-                expect($scope.currentUser.set).toHaveBeenCalledWith("profile",JSON.stringify($scope.Profile));
-                expect($scope.currentUser.set).toHaveBeenCalledWith("photo",$scope.parseFile);
+                expect($scope.currentUser.set).toHaveBeenCalledWith("profile", JSON.stringify($scope.Profile));
+                expect($scope.currentUser.set).toHaveBeenCalledWith("photo", $scope.parseFile);
                 expect($scope.currentUser.save).toHaveBeenCalled();
             });
         })
