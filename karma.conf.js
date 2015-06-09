@@ -20,9 +20,7 @@ module.exports = function(config) {
     'dist/cloud-resources.js',
     'bower_components/supersonic/supersonic.js',
     'parse-1.4.2.min.js',
-    'parse-mock-bundle.js',
-    'dist/app/example.js',
-    'test/**/*/example.js',
+    'test/**/*/*.js',
     'app/**/*/*.js',
     'app/example/views/login.html'
      ],

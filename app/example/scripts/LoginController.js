@@ -14,7 +14,7 @@ angular
 
 	$scope.logIn = function(){					// check username and password from parse cloud, 
 												// and I believe this stores user to localStorage
-	    Parse.User.logIn("Greg Kim2", "123456", {
+	    Parse.User.logIn($scope.currentUser.username, $scope.currentUser.password, {
 	        success: function(user) {
 	          user.save(null, {					// save the row or an object to parse
 	            success: function(user) {		// each time you want data on cloud to change, need save it.
