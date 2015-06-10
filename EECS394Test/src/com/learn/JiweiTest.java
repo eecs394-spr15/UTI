@@ -28,7 +28,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.TouchShortcuts;
 import io.appium.java_client.ios.*;
 
-public class TestGoogleSearch {
+public class JiweiTest {
 	RemoteWebDriver wd;
 	
 	@BeforeTest
@@ -181,6 +181,6 @@ public class TestGoogleSearch {
 	  
 	  @AfterTest
 	  public void afterTest() {
-		  
+		  wd.close();
 	  }
 }

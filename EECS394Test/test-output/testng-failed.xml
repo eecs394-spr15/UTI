@@ -3,17 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.learn.TestGoogleSearch">
+      <class name="com.learn.BiaoheTest">
         <methods>
-          <include name="testLogOut"/>
-          <include name="testProfile"/>
-          <include name="testCases"/>
-          <include name="afterTest"/>
-          <include name="testLogin"/>
-          <include name="testReportUTI"/>
+          <include name="f"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.learn.TestGoogleSearch -->
+      </class> <!-- com.learn.BiaoheTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
